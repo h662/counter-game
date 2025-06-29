@@ -5,6 +5,7 @@ export class CounterGame {
   constructor();
   draw(): void;
   increment(): void;
+  decrement(): void;
 }
 
 export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembly.Module;
@@ -15,6 +16,7 @@ export interface InitOutput {
   readonly countergame_new: () => [number, number, number];
   readonly countergame_draw: (a: number) => void;
   readonly countergame_increment: (a: number) => void;
+  readonly countergame_decrement: (a: number) => void;
   readonly __wbindgen_exn_store: (a: number) => void;
   readonly __externref_table_alloc: () => number;
   readonly __wbindgen_export_2: WebAssembly.Table;

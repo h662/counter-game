@@ -205,6 +205,9 @@ export class CounterGame {
     increment() {
         wasm.countergame_increment(this.__wbg_ptr);
     }
+    decrement() {
+        wasm.countergame_decrement(this.__wbg_ptr);
+    }
 }
 
 async function __wbg_load(module, imports) {

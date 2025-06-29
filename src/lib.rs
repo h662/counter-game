@@ -44,4 +44,20 @@ impl CounterGame {
             .unwrap()
             .post_message(&JsValue::from_str(&msg), "*");
     }
+    
+    #[wasm_bindgen]
+    pub fn decrement(&mut self) {
+        if self.count > 0 {
+            self.count -= 1;
+        }
+        self.draw();
+
+        let msg = format!("{{\"type\":\"count\",\"value\":{}}}", self.count);
+        let _ = window()
+            .unwrap()
+            .parent()
+            .unwrap()
+            .unwrap()
+            .post_message(&JsValue::from_str(&msg), "*");
+    }
 }

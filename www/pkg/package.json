@@ -1,0 +1,15 @@
+{
+  "name": "counter_game",
+  "type": "module",
+  "version": "0.1.0",
+  "files": [
+    "counter_game_bg.wasm",
+    "counter_game.js",
+    "counter_game.d.ts"
+  ],
+  "main": "counter_game.js",
+  "types": "counter_game.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
